@@ -1,0 +1,226 @@
+/* Estilos para telas grandes */
+
+@media screen and (min-width: 992px) {
+    body {
+      background-color: #428dd3;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      padding: 20px;
+    }
+    
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    
+    header h4 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    
+    #btn-ver-produtos {
+      margin-top: 10px;
+    }
+    
+    .navbar {
+      padding: 10px;
+    }
+    
+    .navbar-brand {
+      font-size: 24px;
+    }
+    
+    .navbar-nav .nav-link {
+      font-size: 18px;
+      margin-right: 10px;
+      color: #ffffff;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #428dd3;
+    }
+    
+    .card {
+      margin-bottom: 20px;
+    }
+    
+    .card-title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    
+    .card-text {
+      font-size: 16px;
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .btn-primary {
+      background-color: #428dd3;
+      border-color: #428dd3;
+    }
+    
+    .btn-primary:hover {
+      background-color: #357ebd;
+      border-color: #357ebd;
+    }
+    
+    footer {
+      padding: 10px;
+      font-size: 14px;
+    }
+  }
+  
+/* Estilos para telas médias */
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+    
+    header {
+      padding: 10px;
+    }
+    
+    header h1 {
+      font-size: 28px;
+    }
+    
+    header h4 {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+    
+    #btn-ver-produtos {
+      margin-top: 8px;
+    }
+    
+    .navbar {
+      padding: 8px;
+    }
+    
+    .navbar-brand {
+      font-size: 20px;
+    }
+    
+    .navbar-nav .nav-link {
+      font-size: 16px;
+      margin-right: 8px;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #428dd3;
+    }
+    
+    .card {
+      margin-bottom: 15px;
+    }
+    
+    .card-title {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    
+    .card-text {
+      font-size: 14px;
+    }
+    
+    .card-img-top {
+      height: 160px;
+    }
+    
+    .btn-primary {
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+    
+    .btn-primary:hover {
+      background-color: #357ebd;
+      border-color: #357ebd;
+    }
+    
+    footer {
+      font-size: 12px;
+    }
+  }
+  
+/* Estilos para telas pequenas */
+@media screen and (max-width: 767px) {
+    body {
+      font-size: 12px;
+    }
+    
+    header {
+      padding: 10px;
+    }
+    
+    header h1 {
+      font-size: 24px;
+    }
+    
+    header h4 {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    
+    #btn-ver-produtos {
+      margin-top: 5px;
+    }
+    
+    .navbar {
+      padding: 8px;
+    }
+    
+    .navbar-brand {
+      font-size: 18px;
+    }
+    
+    .navbar-nav .nav-link {
+      font-size: 14px;
+      margin-right: 5px;
+    }
+    
+    .navbar-nav .nav-link:hover {
+      color: #428dd3;
+    }
+    
+    .card {
+      margin-bottom: 10px;
+    }
+    
+    .card-title {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    
+    .card-text {
+      font-size: 12px;
+    }
+    
+    .card-img-top {
+      height: 120px;
+    }
+    
+    .btn-primary {
+      padding: 3px 8px;
+      font-size: 12px;
+    }
+    
+    .btn-primary:hover {
+      background-color: #357ebd;
+      border-color: #357ebd;
+    }
+    
+    footer {
+      font-size: 10px;
+    }
+  }
+  

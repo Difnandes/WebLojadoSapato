@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Loja do Sapato</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <!-- Barra de navegação -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Loja de Sapatos</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrinho.html" id="ver-carrinho">Ver carrinho</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Início da página -->
+  <header class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Bem-vindo à nossa loja de calçados</h1>
+          <h4>Encontre o calçado perfeito para você</h4>
+          <a href="#" id="btn-ver-produtos" class="btn btn-light">Ver produtos</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Seção de produtos adicionados -->
+  <section id="produtos-adicionados" class="produtos-adicionados" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Produtos Adicionados</h2>
+          <ul id="produtos-adicionados-list"></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção de produtos -->
+  <section id="produtos-container" class="produtos">
+    <div class="container">
+      <div class="row">
+        <!-- Primeiro produto-->
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="imagem/4.jpeg" class="card-img-top" alt="Sapato 1">
+            <div class="card-body">
+              <h5 class="card-title">Sapato 1</h5>
+              <p class="card-text">Descrição do Sapato 1.</p>
+              <p class="card-text">R$ 1111</p>
+              <a href="#" class="btn btn-primary btn-adicionar-carrinho" onclick="adicionarProdutoAoCarrinho('Sapato 1', 1111)">Adicionar ao carrinho</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="imagem/icon.jpg" class="card-img-top" alt="Sapato 2">
+            <div class="card-body">
+              <h5 class="card-title">Sapato 2</h5>
+              <p class="card-text">Descrição do Sapato 2.</p>
+              <p class="card-text">R$ 2222</p>
+              <a href="#" class="btn btn-primary btn-adicionar-carrinho" onclick="adicionarProdutoAoCarrinho('Sapato 2', 2222)">Adicionar ao carrinho</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resto dos produtos -->
+        <!-- Resto dos produtos -->
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="imagem/3.jpeg" class="card-img-top" alt="Sapato 2">
+            <div class="card-body">
+              <h5 class="card-title">Sapato 3</h5>
+              <p class="card-text">Descrição do Sapato 3.</p>
+              <p class="card-text">R$ 3333</p>
+              <a href="#" class="btn btn-primary btn-adicionar-carrinho" onclick="adicionarProdutoAoCarrinho('Sapato 2', 2222)">Adicionar ao carrinho</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="imagem/1.jpeg" class="card-img-top" alt="Sapato 2">
+            <div class="card-body">
+              <h5 class="card-title">Sapato 4</h5>
+              <p class="card-text">Descrição do Sapato 4.</p>
+              <p class="card-text">R$ 4444</p>
+              <a href="#" class="btn btn-primary btn-adicionar-carrinho" onclick="adicionarProdutoAoCarrinho('Sapato 2', 2222)">Adicionar ao carrinho</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="imagem/logo-secoes.jpg" class="card-img-top" alt="Sapato 2">
+            <div class="card-body">
+              <h5 class="card-title">Sapato 5</h5>
+              <p class="card-text">Descrição do Sapato 5.</p>
+              <p class="card-text">R$ 5555</p>
+              <a href="#" class="btn btn-primary btn-adicionar-carrinho" onclick="adicionarProdutoAoCarrinho('Sapato 2', 2222)">Adicionar ao carrinho</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+   <!-- Carrinho de compras -->
+   <section id="carrinho" class="carrinho" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h2>Carrinho de compras</h2>
+          <ul id="produtos-adicionados-list"></ul>
+          <p>Total: R$ <span id="total-carrinho">0</span></p>
+          <button class="btn btn-success" onclick="concluirCompra()">Concluir Compra</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2023 Loja de Sapatos. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
+  <script>
+    document.getElementById("btn-ver-produtos").addEventListener("click", function() {
+      document.getElementById("produtos-adicionados").style.display = "block";
+    });
+  </script>
+</body>
+</html>
+

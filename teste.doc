@@ -1,0 +1,108 @@
+  !!!!!!!!!!!!!!!!!Este código teste caso não de certo index.html!!!!!!!!!!!!!!!!!!!!
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2023 Loja de Sapatos. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="styles.css"></script>
+  <script src="app.js"></script>
+  <script src="scripts.js"></script>
+  <script>
+
+    // Seleciona o botão "Ver produtos" pelo ID
+  const btnVerProdutos = document.getElementById('btn-ver-produtos');
+
+  // Adiciona um ouvinte de evento de clique ao botão
+  btnVerProdutos.addEventListener('click', function(event) {
+    // Impede o comportamento padrão do link (navegação)
+    event.preventDefault();
+
+    // Carrega os produtos
+    carregarProdutos();
+  });
+
+  // Função para ocultar a seção de produtos e mostrar o carrinho
+function mostrarCarrinho() {
+  const secaoProdutos = document.getElementById('produtos');
+  const secaoCarrinho = document.getElementById('carrinho');
+
+  secaoProdutos.style.display = 'none';
+  secaoCarrinho.style.display = 'block';
+}
+
+// Função para carregar os produtos na página
+function carregarProdutos() {
+  const produtosContainer = document.getElementById('produtos-container');
+
+  // Cria um array de produtos
+  const produtos = [
+    { nome: 'Sapato 1', preco: 1111, imagem: 'imagem/4.jpeg', descricao: 'Descrição do Sapato 1.' },
+    { nome: 'Sapato 2', preco: 2222, imagem: 'imagem/icon.jpg', descricao: 'Descrição do Sapato 2.' }
+    // Adicione mais produtos aqui
+  ];
+
+  // Limpa o conteúdo atual do contêiner de produtos
+  produtosContainer.innerHTML = '';
+
+  // Itera sobre os produtos e cria o HTML para cada um
+  produtos.forEach((produto) => {
+    const novoProduto = document.createElement('div');
+    novoProduto.classList.add('col-md-4', 'mb-4');
+    novoProduto.innerHTML = `
+      <div class="card">
+        <img src="${produto.imagem}" class="card-img-top" alt="${produto.nome}">
+        <div class="card-body">
+          <h5 class="card-title">${produto.nome}</h5>
+          <p class="card-text">${produto.descricao}</p>
+          <p class="card-text">R$ ${produto.preco}</p>
+          <a href="#" class="btn btn-primary btn-adicionar-carrinho" onclick="adicionarProdutoAoCarrinho('${produto.nome}', ${produto.preco})">Adicionar ao carrinho</a>
+        </div>
+      </div>
+    `;
+
+    produtosContainer.appendChild(novoProduto);
+  });
+}
+
+// Função para adicionar um produto ao carrinho
+function adicionarProdutoAoCarrinho(nome, preco) {
+  const produtosAdicionados = document.getElementById('produtos-adicionados');
+  const totalCarrinho = document.getElementById('total-carrinho');
+
+  // Cria um novo item da lista de produtos adicionados
+  const novoProduto = document.createElement('li');
+  novoProduto.textContent = `${nome} - R$ ${preco}`;
+
+  // Adiciona o item à lista de produtos adicionados
+  produtosAdicionados.appendChild(novoProduto);
+
+  // Atualiza o total do carrinho
+  const totalAtual = parseFloat(totalCarrinho.textContent);
+  const novoTotal = totalAtual + parseFloat(preco);
+  totalCarrinho.textContent = novoTotal.toFixed(2);
+
+  // Salva o carrinho no armazenamento local
+  salvarCarrinho();
+}
+
+// Função para atualizar o total do carrinho
+function atualizarTotalCarrinho() {
+  const totalCarrinho = document.getElementById('total-carrinho');
+  const produtosAdicionados = document.getElementById('produtos-adicionados').getElementsByTagName('li');
+  let novoTotal = 0;
+
+  // Calcula o novo total com base nos itens do carrinho
+  for (let i = 0; i < produtosAdicionados.length; i++) {
+    const preco = parseFloat(produtosAdicionados[i].textContent.split(' - ')[1].replace('R$ ', ''));
+    novoTotal += preco;
+  }
+
+   // Atualiza o total do carrinho com o novo valor calculado
+  totalCarrinho.textContent = novoTotal.toFixed(2);
+}
+

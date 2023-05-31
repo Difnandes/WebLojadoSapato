@@ -1,0 +1,88 @@
+body {
+    background-color: #428dd3;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Estilos do cabeçalho */
+  header {
+    background-color: hsl(210, 59%, 51%);
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  header h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  #btn-ver-produtos {
+    margin-top: 10px;
+  }
+
+  /* Estilos da barra de navegação */
+  .navbar {
+    background-color: #343a40;
+    padding: 10px;
+  }
+
+  .navbar-brand {
+    font-size: 24px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #ffffff;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #428dd3;
+  }
+
+  /* Estilos dos produtos */
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .btn-primary {
+    background-color: #428dd3;
+    border-color: #428dd3;
+  }
+
+  .btn-primary:hover {
+    background-color: #357ebd;
+    border-color: #357ebd;
+  }
+
+  /* Estilos do rodapé */
+  footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+  }
+

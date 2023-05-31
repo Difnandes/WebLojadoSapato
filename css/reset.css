@@ -1,0 +1,41 @@
+/* Reset de estilos */
+
+/* Reset de margens e preenchimentos */
+body, h1, h2, h3, h4, h5, h6, p, figure, ul, ol, li, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Define a fonte padrão e tamanho do corpo */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+  }
+  
+  /* Remove a decoração de link padrão */
+  a {
+    text-decoration: none;
+  }
+  
+  /* Define a cor do link padrão */
+  a:link,
+  a:visited {
+    color: #428dd3;
+  }
+  
+  /* Remove os estilos de lista */
+  ul, ol {
+    list-style: none;
+  }
+  
+  /* Remove a decoração do texto enfatizado */
+  em {
+    font-style: normal;
+  }
+  
+  /* Define o tamanho máximo para elementos de imagem */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
